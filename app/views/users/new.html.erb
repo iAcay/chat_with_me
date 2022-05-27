@@ -1,17 +1,24 @@
 <h1 class="ui center aligned icon header">Welcome to <strong class="chat_with_me">ChatWithMe</strong></h1>
 <h3 class="ui center aligned icon header">
-  <i class="circular orange power off icon", id="icon"></i>
+  <i class="circular orange pencil alternate icon", id="icon"></i>
 </h3>
-<h3 class="ui horizontal divider header">Log in to continue</h3>
+<h3 class="ui horizontal divider header">Sign up and chat with us!</h3>
 <div class="ui placeholder segment">
-  <div class="ui two column very relaxed stackable grid">
+  <div class="ui very relaxed stackable grid">
     <div class="column">
-      <%= form_for(:session, html: {class: "ui form", role: "form"}, url: login_path) do |f| %>
+      <%= form_for(:user, html: {class: "ui form", role: "form"}, url: signup_path) do |f| %>
         <div class="field">
           <%= f.label :username, "Username" %>
           <div class="ui left icon input">
             <%= f.text_field :username, placeholder: "Username" %>
             <i class="user icon"></i>
+          </div>
+        </div>
+        <div class="field">
+          <%= f.label :email, "Email" %>
+          <div class="ui left icon input">
+            <%= f.email_field :email, placeholder: "Email" %>
+            <i class="envelope icon"></i>
           </div>
         </div>
         <div class="field">
@@ -21,14 +28,8 @@
             <i class="lock icon"></i>
           </div>
         </div>
-        <%= f.button "Login", class: "ui orange submit button" %>
+        <%= f.button "Sign up!", class: "ui orange submit button" %>
       <% end %>
     </div>
-    <div class="middle aligned column">
-        <%= link_to 'Sign up!', signup_path, class: "ui inverted orange big button"%>
-    </div>
-  </div>
-  <div class="ui vertical divider">
-    Or
   </div>
 </div>

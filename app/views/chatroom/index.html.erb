@@ -29,14 +29,13 @@
       <div class="content">
         <div class="ui inverted vertical menu">
           <a class="item">
-            Home
+            Users:
           </a>
-          <a class="item">
-            Messages
-          </a>
-          <a class="item active">
-            Friends
-          </a>
+          <% @users.each do |user| %>
+            <a class="item">
+              <%= user.username %>
+            </a>
+          <% end %>
         </div>
       </div>
     </div>
