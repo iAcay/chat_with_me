@@ -1,5 +1,5 @@
 <div class="ui large inverted menu">
-  <%= link_to 'ChatWithMe', root_path, class: 'item', id: 'logo' %>
+  <%= link_to 'ChatWithMe', (logged_in? ? root_path : login_path), class: 'item', id: 'logo' %>
   <%= link_to 'Chatroom', root_path, class: 'item' %>
   <div class="right menu">
     <% if logged_in? %>
