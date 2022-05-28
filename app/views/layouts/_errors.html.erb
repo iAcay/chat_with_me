@@ -1,0 +1,14 @@
+<% if obj.errors.any? %>
+  <div class="ui container">
+    <ul>
+      <div class="ui error message transition">
+        <% obj.errors.full_messages.each do |error| %>
+          <i class="close icon"></i>
+          <div class="header">
+            <li><%= error %></li>
+          </div>
+        <% end %>
+      </div>
+    </ul>
+  </div>
+<% end %>
