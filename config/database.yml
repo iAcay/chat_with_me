@@ -23,3 +23,4 @@ test:
 production:
   <<: *default
   database: flatiron_mod3_production
+  url: postgres://flatiron_mod3_production_user:eIjcXJHxjf1A2W9y1LexzLtw8uz1OF1t@dpg-cpoti788fa8c73aftp7g-a/flatiron_mod3_production
